@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Animation for "Admission Form" title */
+        .animate-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff7f00; /* Orange color */
+            animation: fadeInTitle 1s ease-in-out forwards, slideUp 0.8s ease-in-out;
+        }
+
+        @keyframes fadeInTitle {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); }
+            to { transform: translateY(0); }
+        }
+
+        /* Styling for input fields */
+        .form-control {
+            font-weight: bold;
+            font-size: 1.1rem;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 10px 15px;
+        }
+
+        /* Styling for form labels */
+        .form-label {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Submit button style */
+        .btn-submit {
+            font-weight: bold;
+            background-color: #007bff;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+
+        /* Container and form styling */
+        .admission-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        /* Styling for subject options */
+        .subject-options {
+            display: flex;
+            justify-content: center; /* Center align radio buttons */
+            flex-wrap: wrap; /* Allow wrapping */
+        }
+
+        .subject-options .form-check {
+            margin: 5px 15px; /* Add spacing between radio buttons */
+        }
+
+        /* Custom styling for radio buttons */
+        .subject-options .form-check-input:checked + .form-check-label {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        .subject-options .form-check-label {
+            padding: 10px 15px; /* Adjust padding for labels */
+            border: 2px solid #333;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+    </style>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f5f5f5;">
+    <div class="container my-5">
+        <h1 class="text-center animate-title mb-4">Admission Form</h1>
+        
+        <div class="admission-container">
+            <form>
+                <!-- First Name field -->
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter first name" required pattern="[A-Za-z ]{1,}">
+                </div>
+
+                <!-- Email field -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address.">
+                </div>
+
+                <!-- Student Name field -->
+                <div class="mb-3">
+                    <label for="studentName" class="form-label">Student Name (Full Name)</label>
+                    <input type="text" class="form-control" id="studentName" placeholder="Enter full name" required pattern="[A-Za-z ]{1,}">
+                </div>
+
+                <!-- Student Contact Number field -->
+                <div class="mb-3">
+                    <label for="studentContact" class="form-label">Contact Number (Student)</label>
+                    <input type="tel" class="form-control" id="studentContact" placeholder="Enter student contact number" required pattern="[0-9]{10}" title="Contact number must be exactly 10 digits.">
+                </div>
+
+                <!-- Parent Contact Number field -->
+                <div class="mb-3">
+                    <label for="parentContact" class="form-label">Contact Number (Parents)</label>
+                    <input type="tel" class="form-control" id="parentContact" placeholder="Enter parent contact number" pattern="[0-9]{10}" title="Contact number must be exactly 10 digits.">
+                </div>
+
+                <!-- College Name field -->
+                <div class="mb-3">
+                    <label for="collegeName" class="form-label">College Name</label>
+                    <input type="text" class="form-control" id="collegeName" placeholder="Enter college name" required pattern="[A-Za-z0-9 ]{1,}">
+                </div>
+
+                <!-- Subjects Combination field -->
+                <div class="mb-3">
+                    <label class="form-label">Subjects Combination</label>
+                    <div class="subject-options">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="subjects" id="maths" value="Maths" required>
+                            <label class="form-check-label" for="maths">Maths</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="subjects" id="science" value="Science" required>
+                            <label class="form-check-label" for="science">Science</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="subjects" id="commerce" value="Commerce" required>
+                            <label class="form-check-label" for="commerce">Commerce</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="subjects" id="arts" value="Arts" required>
+                            <label class="form-check-label" for="arts">Arts</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="subjects" id="other" value="Other">
+                            <label class="form-check-label" for="other">Other</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class/Grade dropdown field -->
+                <div class="mb-3">
+                    <label for="classGrade" class="form-label">Class / Grade</label>
+                    <select class="form-control" id="classGrade" required>
+                        <option value="" disabled selected>Select your class/grade</option>
+                        <option value="1">Class 1</option>
+                        <option value="2">Class 2</option>
+                        <option value="3">Class 3</option>
+                        <option value="4">Class 4</option>
+                        <option value="5">Class 5</option>
+                        <option value="6">Class 6</option>
+                        <option value="7">Class 7</option>
+                        <option value="8">Class 8</option>
+                        <option value="9">Class 9</option>
+                        <option value="10">Class 10</option>
+                        <option value="11">Class 11</option>
+                        <option value="12">Class 12</option>
+                    </select>
+                </div>
+
+                <!-- Submit button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-submit mt-3">Submit Admission</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

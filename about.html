@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Fade-in animation for all elements */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        /* Slide-in animation for the Mission, Vision, and Goals sections */
+        .slide-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideIn 1s forwards;
+        }
+
+        /* Keyframes for fade-in and slide-in animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Underline styling for section titles */
+        .underline {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .underline::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: currentColor;
+            transition: width 0.3s;
+        }
+
+        /* Color for each section */
+        .mission {
+            color: red;
+        }
+
+        .vision {
+            color: blue;
+        }
+
+        .goals {
+            color: green;
+        }
+
+        /* Grid styling to align items horizontally */
+        .row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f5f5f5;">
+    <div class="container my-5">
+        <!-- "About Us" title with fade-in animation -->
+        <h1 class="text-center mb-4 fade-in" style="animation-delay: 0.2s;">About Us</h1>
+        
+        <!-- Horizontal Grid for Mission, Vision, and Goals -->
+        <div class="row">
+            <!-- Mission Section -->
+            <div class="col-md-4 slide-in mission" style="animation-delay: 0.4s;">
+                <div class="card p-4 border-0 shadow" style="border-radius: 8px;">
+                    <h3 class="card-title underline" style="font-weight: bold;color: red;">Mission</h3>
+                    <p class="card-text">
+                        At Study Point, our mission is to create an inclusive and dynamic learning environment that sparks curiosity and encourages critical thinking across a range of subjects. We strive to provide students with essential knowledge and versatile skills, preparing them for real-world challenges and fostering a lifelong love for learning.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Vision Section -->
+            <div class="col-md-4 slide-in vision" style="animation-delay: 0.6s;">
+                <div class="card p-4 border-0 shadow" style="border-radius: 8px;">
+                    <h3 class="card-title underline" style="font-weight: bold;color: blue;">Vision</h3>
+                    <p class="card-text">
+                        Our vision is to inspire students to explore diverse fields with confidence, equipping them to be adaptable, innovative, and responsible individuals in a constantly evolving world. We envision Study Point as a place where students not only gain knowledge but also build meaningful connections between subjects, preparing them for future academic and personal success.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Goals Section -->
+            <div class="col-md-4 slide-in goals" style="animation-delay: 0.8s;">
+                <div class="card p-4 border-0 shadow" style="border-radius: 8px;">
+                    <h3 class="card-title underline"  style="font-weight: bold;color: green;">Goals</h3>
+                    <p class="card-text">
+                        Our goals focus on comprehensive knowledge acquisition, skill development, student engagement, and holistic growth. At Study Point, we are committed to nurturing each student's intellectual, social, and emotional development, creating a foundation for lifelong achievement and curiosity-driven learning.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

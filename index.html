@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link to the updated CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> <!-- Font Awesome for icons -->
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <a class="navbar-brand" href="#">
+                <img src="logo.jpg" alt="Logo" height="50" class="logo">
+                <span class="ml-2">Study Point</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link login-btn" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="overlay-text">
+            <h1 class="slide-in">Welcome to Study Point</h1>
+            <p class="slide-in">Creating Geniuses Every Day</p>
+            <a href="about.html" class="btn btn-primary">Read More</a>
+        </div>
+    </section>
+
+    <!-- Image Slider -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="slider3.png" class="d-block w-100 slider-image" alt="Image 1">
+                <div class="carousel-caption d-none d-md-block"></div>
+            </div>
+            <div class="carousel-item">
+                <img src="slider.jpg" class="d-block w-100 slider-image" alt="Image 2">
+                <div class="carousel-caption d-none d-md-block"></div>
+            </div>
+            <div class="carousel-item">
+                <img src="slider2.jpg" class="d-block w-100 slider-image" alt="Image 3">
+                <div class="carousel-caption d-none d-md-block"></div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-column">
+                    <h5 class="animated-header">Contact Us</h5>
+                    <p><h6>Email: studypoint@gmail.com</h6></p>
+                    <p><h6>Phone: +919548393834</h6></p>
+                </div>
+                <div class="col-md-4 footer-column">
+                    <h5 class="animated-header">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="login.html" class="footer-link">Login</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="admission.html" class="footer-link">Admission</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-column">
+                    <h5 class="animated-header">Follow Us</h5>
+                    <br>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center">&copy; 2023 Study Point. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- Full version of jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

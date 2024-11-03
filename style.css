@@ -1,0 +1,249 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f0f8ff, #e0eafc);
+    padding-top: 60px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #343a40;
+    transition: background-color 0.3s;
+}
+
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.navbar .navbar-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end; /* Align items to the right */
+}
+
+.navbar .nav-link {
+    color: white !important;
+    margin-right: 15px;
+    font-size: 1.1em;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 4px;
+    width: 0;
+    background: #ffffff;
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+.navbar .nav-link:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.login-btn {
+    background-color: #2c73d7;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding: 80px 20px;
+    color: #343a40;
+    background: #f7f9fc;
+    border-bottom: 3px solid #dedede;
+}
+
+.welcome-section .overlay-text h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 1s forwards;
+}
+
+.welcome-section .overlay-text p {
+    font-size: 1.5em;
+    color: #343a40;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.btn-primary {
+    background-color: #f0792a;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: #ffffff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d06826;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 30px 0; /* Adjusted padding */
+    position: relative;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2); /* Added shadow */
+}
+
+/* Footer Animation for Main Elements */
+.footer .animated-header {
+    position: relative;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 1s forwards;
+}
+
+.footer .animated-header:nth-child(1) { animation-delay: 0.1s; }
+.footer .animated-header:nth-child(2) { animation-delay: 0.2s; }
+.footer .animated-header:nth-child(3) { animation-delay: 0.3s; }
+
+/* Underline for Footer Header */
+.footer .animated-header:after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #640bb1;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+/* Quick Links Styling */
+.footer .footer-links .footer-link {
+    display: inline-block;
+    color: white; /* Ensures all links are white */
+    margin: 0 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s forwards;
+    transition: color 0.3s; /* Added transition for color */
+}
+
+.footer .footer-link:nth-child(1) { animation-delay: 0.1s; }
+.footer .footer-link:nth-child(2) { animation-delay: 0.2s; }
+.footer .footer-link:nth-child(3) { animation-delay: 0.3s; }
+.footer .footer-link:nth-child(4) { animation-delay: 0.4s; }
+
+.footer .footer-link:hover {
+    color: #f0792a; /* Change color on hover */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 8px;
+    transition: transform 0.3s; /* Added transition for hover effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Scale effect on hover */
+}
+
+/* Prevent overflow of specific elements */
+img, .carousel-inner, .container, .row {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Media Query adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Example of adjusting specific elements */
+    .navbar-brand .logo {
+        max-width: 100px; /* Adjust logo size for smaller screens */
+    }
+
+    /* Align items on mobile */
+    .navbar .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar .nav-link, .login-btn {
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between items on smaller screens */
+        width: 100%; /* Make each item take up full width */
+        text-align: center;
+        animation: fadeIn 0.5s forwards; /* Add animation back to nav items */
+    }
+
+    .login-btn {
+        margin-left: 0; /* Remove extra left margin on smaller screens */
+    }
+
+    /* Adjust padding or margins that might cause overflow */
+    .welcome-section, .footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

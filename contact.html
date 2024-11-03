@@ -69,29 +69,29 @@
         <h1 class="text-center animate-title mb-4" style="color: blue;">Contact Us</h1>
         
         <div class="contact-container">
-            <form>
+            <form action="https://script.google.com/macros/s/AKfycbxKoY_q1yFmeG_xgDjmrtxDYY0nnLvV8sidp4hv15RXIIYJeooEjmU9rWI3JncDP-0n/exec" method="POST"> <!-- Updated this line -->
                 <!-- Name field -->
                 <div class="mb-3">
                     <label for="name" class="form-label">Your Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
                 </div>
 
                 <!-- Email field -->
                 <div class="mb-3">
                     <label for="email" class="form-label">Your Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
                 </div>
 
                 <!-- Subject field -->
                 <div class="mb-3">
                     <label for="subject" class="form-label">Subject</label>
-                    <input type="text" class="form-control" id="subject" placeholder="Enter the subject" required>
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter the subject" required>
                 </div>
 
                 <!-- Message field -->
                 <div class="mb-3">
                     <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="4" placeholder="Type your message here" required></textarea>
+                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Type your message here" required></textarea>
                 </div>
 
                 <!-- Submit button -->
